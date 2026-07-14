@@ -33,7 +33,9 @@ Multiple instances (tests, several apps): `createGithubServiceClient(options)`
 returns the same surface without touching the singleton; the raw typed tRPC
 client is available as `.trpc` / `getGithubServiceClient().trpc`.
 
-Peer dependencies: `@trpc/client` (runtime), `@trpc/server` + `zod` (types).
+Dependencies are self-contained: `@trpc/client` (runtime) and
+`@trpc/server` (types only) come with the package — consumers install
+nothing else.
 
 Versioning: **minor** = a new API major namespace was added; **major** = an
 old API major was removed (its calls then fail at compile time).
