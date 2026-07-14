@@ -16,8 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && dts-bundle-generator --project tsconfig.json --no-banner --no-check -o dist/index.d.ts index.ts && bun build index.ts --outdir dist --packages external && tsc -p tsconfig.consumer-check.json",
-    "prepublishOnly": "bun run build"
+    "build": "rm -rf dist && dts-bundle-generator --project tsconfig.json --no-banner --no-check -o dist/index.d.ts index.ts && bun build index.ts --outdir dist --packages external && tsc -p tsconfig.consumer-check.json"
   },
   "publishConfig": {
     "access": "public"
