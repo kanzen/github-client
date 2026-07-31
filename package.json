@@ -1,6 +1,6 @@
 {
   "name": "@kanzen/github-client",
-  "version": "1.0.1",
+  "version": "0.0.0-development",
   "description": "Typed client for the kanzen GitHub service.",
   "license": "MIT",
   "type": "module",
@@ -16,7 +16,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && dts-bundle-generator --project tsconfig.json --no-banner --no-check -o dist/index.d.ts index.ts && bun build index.ts --outdir dist --packages external && tsc -p tsconfig.consumer-check.json"
+    "build": "rm -rf dist && dts-bundle-generator --project tsconfig.json --no-banner --no-check -o dist/index.d.ts index.ts && bun build index.ts --outdir dist --packages external && tsc -p tsconfig.consumer-check.json",
+    "test": "echo 'no standalone tests: client.test.ts needs ../src, so it only runs from the service repo checkout'",
+    "semantic-release": "semantic-release"
   },
   "publishConfig": {
     "access": "public"
@@ -26,6 +28,7 @@
     "@trpc/server": "^11.18.0"
   },
   "devDependencies": {
+    "@txo/semantic-release": "^2.1.1",
     "dts-bundle-generator": "^9.5.1",
     "typescript": "^5"
   }
