@@ -2,6 +2,10 @@
   "name": "@kanzen/github-client",
   "version": "0.0.0-development",
   "description": "Typed client for the kanzen GitHub service.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanzen/github-client.git"
+  },
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
